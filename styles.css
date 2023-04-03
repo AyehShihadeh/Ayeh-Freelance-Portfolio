@@ -46,9 +46,13 @@ body{
 
 .title{
     color: #B58200;
-    font-size: 20px;
+    font-size: 24px;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    font-weight: lighter;
 }
 .name{
+    letter-spacing: 1px;
     color: #B58200;
 }
 
@@ -76,16 +80,60 @@ body{
     width: fit-content;
     height: fit-content;
     margin: 100px 100px;
-    border-radius: 20px;
 }
 
 .grid-item{
-    background-color: white;
-    border: 2px #B58200 solid;
-    padding: 10px;
-    margin: 2px;
+    border: 2px transparent solid;
+    margin: 5px;
     width: 165px;
     height: 165px;
+    position: relative;
+}
+
+.grid-item:hover .image {
+    opacity: 0.2;
+  }
+  
+.grid-item:hover .middle {
+    opacity: 1;
+}
+
+.grid-item:hover{
+    border: 2px #B58200 solid;
+}
+
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    padding: 5px;
+    background-color: #815c0059;
+}
+
+a{
+    font-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: #815d00;
 }
 
 @media all and (max-width:1090px){
@@ -137,6 +185,9 @@ body{
     .grid-item{
         width: 100px;
         height: 100px;
+    }
+    .title{
+        font-size: 20px;
     }
 }
 
