@@ -123,10 +123,9 @@ body{
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
-    width: 70%;
-    padding: 5px;
+    width: 100%;
+    padding: 10px 0px;
     background-color: #815c0059;
-    border-radius: 20px;
 }
 
 a{
@@ -181,6 +180,10 @@ a:visited{
     .grid-item{
         width: 110px;
         height: 110px;
+    }
+
+    .middle{
+        font-size: 12px;
     }
 }
 
